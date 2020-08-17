@@ -7,6 +7,7 @@ const args = require("yargs").argv;
 const config = require("../../config.js");
 
 const data = require("../data/data.js");
+
 /**
  * @description Запускает сервер. В режиме разработчика только
  * api, в обычном — все целиком.

@@ -4,11 +4,11 @@
   "description": "",
   "main": "./src/server/server.js",
   "scripts": {
-    "dev front": "webpack-dev-server --mode development --open --hot",
-    "dev back": "node src/server/server --dev=1",
+    "devFront": "webpack-dev-server --mode development --open --hot",
+    "devBack": "node src/server/server --dev=1",
     "run": "node src/server/server --dev=0",
-    "build front": "webpack --mode production",
-    "get data": "node src/data/fill.js"
+    "build": "webpack --mode production",
+    "fillData": "node src/data/fill.js"
   },
   "author": "mknrk",
   "license": "ISC",
