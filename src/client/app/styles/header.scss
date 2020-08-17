@@ -1,0 +1,37 @@
+@import "global.scss";
+
+header {
+  width: 72vw;
+
+  margin: 1rem auto;
+
+  background-color: $blue;
+  background: linear-gradient(90deg, $darkblue, $lightblue);
+
+  border-radius: 0.5rem;
+  
+  * {
+    color: whitesmoke;
+  }
+
+  span {
+    display: block;
+    
+    padding: 0.5rem 1rem 0 1rem;
+  }
+
+  button {
+    display: block;
+
+    cursor: pointer;
+    
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    background-color: $transparent;
+
+    border: 0;
+  }
+}

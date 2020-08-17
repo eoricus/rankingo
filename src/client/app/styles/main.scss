@@ -1,0 +1,146 @@
+@import "global.scss";
+
+main {
+  width: 96vw;
+
+  margin: 1rem auto 0 auto;
+
+  * {
+    transition: 512ms;
+  }
+
+  #Menu {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .MenuLink {
+      display: block;
+
+      padding: 0.25rem 0.5rem;
+
+      a {
+        color: $blue;
+      }
+
+      :hover {
+        color: $darkblue;
+      }
+    }
+  }
+
+  #Output {
+    #SearchBar {
+      #SearchField {
+        display: block;
+        box-sizing: border-box;
+
+        width: 100%;
+
+        margin: 0.5rem 0 0 0;
+
+        border: 0;
+      }
+
+      .Indicator {
+        width: 100%;
+        height: 1.5rem;
+        
+        line-height: 1.5rem;
+        
+        transition: 100ms;
+      }
+
+      .Indicator.Wait {
+        background-color: #ffeb3b;
+        color: black;
+      }
+
+      .Indicator.Error {
+        background-color: #f44336;
+        color: $white;
+      }
+
+      .Indicator.NothingFound {
+        background-color: #9e9e9e;
+        color: black;
+      }
+
+      .Indicator.Success {
+        background-color: #4caf50;
+        color: black;
+      }
+
+      #Options {
+        .Option {
+          display: inline-block;
+
+          label {
+            display: inline-block;
+
+            cursor: pointer;
+            
+            user-select: none;
+
+            margin: 0.32rem 0.32rem 0 0;
+            padding: 0.16rem 0.32rem;
+
+            background-color: $lightblue;
+
+            border-radius: 0.16rem;
+          }
+
+          input[type="radio"] {
+            display: none;
+          }
+
+          input[type="radio"]:hover + label {
+            background-color: $blue;
+            color: whitesmoke;
+            transform: scale(1.28);
+          }
+
+          input[type="radio"]:checked + label {
+            background-color: $darkblue;
+            color: whitesmoke;
+          }
+        }
+      }
+    }
+
+    #Items {
+      display: flex;
+      flex-direction: column;
+
+      .University {
+        display: flex;
+
+        width: 85vw;
+
+        margin: 0.32rem auto;
+        padding-bottom: 0.32rem;
+
+        border-bottom: 0.08rem solid;
+
+        .Number {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          margin-right: 1rem;
+        }
+
+        .Info {
+          .Verified {
+            display: inline-block;
+
+            background-color: $blue;
+            color: $white;
+            
+            border-radius: 0.32rem;
+          }
+        }
+      }
+    }
+  }
+}

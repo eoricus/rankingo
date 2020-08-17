@@ -1,0 +1,31 @@
+$blue: #3863f2;
+$lightblue: #6486f5;
+$darkblue: #1040e2;
+$white: whitesmoke;
+$transparent: rgba(0, 0, 0, 0);
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-size: 20px; //1rem
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  position: relative;
+
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
