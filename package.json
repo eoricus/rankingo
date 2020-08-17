@@ -32,6 +32,7 @@
     "react-router-dom": "^5.2.0",
     "sequelize": "^6.3.4",
     "sqlite3": "^5.0.0",
+    "vk-io": "^4.0.0-rc.30",
     "yargs": "^15.4.1"
   }
 }

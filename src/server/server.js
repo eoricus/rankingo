@@ -19,10 +19,10 @@ async function runServer(dev) {
   await data.init();
 
   if (!dev) {
-    app.use(express.static(config.path + "\\dist"));
+    app.use(express.static(config.path + "//dist"));
 
     app.get("/|", function (req, res) {
-      res.sendFile(config.path + "\\dist\\index.html");
+      res.sendFile(config.path + "//dist//index.html");
     });
   } else {
     console.log("Запущено в режиме разработчика");
