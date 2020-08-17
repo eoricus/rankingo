@@ -35,8 +35,6 @@ export default function Main() {
           <Route path="/universities" component={Universities} />
           <Route path="/cities" component={Cities} />
           <Route path="/top" component={Top} />
-
-          <Redirect path="/" to="/top" />
         </Switch>
       </Router>
     </main>

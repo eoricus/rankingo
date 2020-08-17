@@ -18,16 +18,6 @@ async function runServer(dev) {
   const port = dev ? 3001 : 8080;
   await data.init();
 
-  if (!dev) {
-    app.use(express.static(config.path + "//dist"));
-
-    app.get("/|", function (req, res) {
-      res.sendFile(config.path + "//dist//index.html");
-    });
-  } else {
-    console.log("Запущено в режиме разработчика");
-  }
-
   app.get("/api", async function (req, res) {
     let result;
     switch (req.query.type) {
@@ -73,6 +63,16 @@ async function runServer(dev) {
 
     res.send(result);
   });
+
+  if (!dev) {
+    app.use(express.static(config.path + "//dist"));
+
+    app.get("/|", function (req, res) {
+      res.sendFile(config.path + "//dist//index.html");
+    });
+  } else {
+    console.log("Запущено в режиме разработчика");
+  }
 
   app.listen(port, function () {
     console.log(`Сервер запущен на порте ${port}`);
