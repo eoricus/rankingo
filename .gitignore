@@ -2,11 +2,7 @@
 node_modules
 # Билд (Дист)))
 dist
-# Прогресс загрузки данных
-progress.json
 # Манифест
 package-lock.json
-# Конфиг с данными
-config.js
 # База данных
 *.sqlite
