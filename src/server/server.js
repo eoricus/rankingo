@@ -1,11 +1,13 @@
+var fs = require("fs");
+var http = require("http");
+var https = require("https");
+var privateKey = fs.readFileSync("./sslcert/privkey.pem", "utf8");
+var certificate = fs.readFileSync("./sslcert/fullchain.pem", "utf8");
+
 const Sequelize = require("sequelize");
-
 const express = require("express");
-
 const args = require("yargs").argv;
-
 const config = require("../../config.js");
-
 const data = require("../data/data.js");
 
 /**
@@ -73,10 +75,13 @@ async function runServer(dev) {
   } else {
     console.log("Запущено в режиме разработчика");
   }
+  
+  var credentials = {key: privateKey, cert: certificate};
+  var httpServer = http.createServer(app);
+  var httpsServer = https.createServer(credentials, app);
 
-  app.listen(port, function () {
-    console.log(`Сервер запущен на порте ${port}`);
-  });
+  httpServer.listen(80, () => console.log("https запущен"));
+  httpsServer.listen(443, () => console.log("https запущен"));
 }
 
 runServer(args.dev);
